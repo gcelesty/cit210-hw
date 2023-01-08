@@ -6,6 +6,8 @@ class Program
     {
         Console.Write("Enter your grade percentage: ");
         string answer = Console.ReadLine();
+        
+        // converting string to number
         int grade = int.Parse(answer);
 
         string letter = "";
