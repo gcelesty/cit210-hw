@@ -12,7 +12,7 @@ class Program
         do
         {
             Console.Write("What is your guess? ");
-            guess  = int.Parse(Console.ReadLine());
+            guess = int.Parse(Console.ReadLine());
 
             if (magic > guess)
             {
