@@ -7,10 +7,16 @@ class Journal
     public void Display()
     {
         // iterate thrugh each entry in the list and display it
-        Console.WriteLine("Displaying the journal");  
+        //Console.WriteLine("Displaying the journal");  
  
         // entry.GetEntry();
 
+    
+            _entries.ForEach(entry =>
+            {
+                Console.WriteLine(entry.GetEntry()); 
+            });
+            
     }
 
     public void Save(string file)
