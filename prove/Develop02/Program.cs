@@ -49,8 +49,6 @@ class Program
             {
                 // display
                 theJournal.Display();
-
-                // Console.WriteLine(Entry.GetEntry());
             }
             else if (choice == "3")
             {

@@ -29,8 +29,10 @@ class Entry
 
     public string GetEntry() 
     {
+
         Console.WriteLine($"Date: {this._date} - {this._prompt}");
         Console.WriteLine($">> {this._text}");
+        Console.WriteLine("");
 
         return $"{this._date};{this._prompt};{this._text}";
     }
