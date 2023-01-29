@@ -2,17 +2,21 @@ class Journal
 {
     public List<Entry> _entries = new List<Entry>();
 
+    public Journal() { }
+
     public void Display()
     {
         // iterate thrugh each entry in the list and display it
-        Console.WriteLine("Displaying the journal");        
+        Console.WriteLine("Displaying the journal");  
+ 
+        // entry.GetEntry();
+
     }
 
     public void Save(string file)
     {
         // save all entries out to the file
         Console.WriteLine($"Saving journal to file {file}");
-        this._entries=AddEntry(_entries);
 
         using (StreamWriter outputFile = new StreamWriter($"{file.Split('.')[0]}.csv"))
         {
@@ -23,10 +27,6 @@ class Journal
         }
     }
 
-    private List<Entry> AddEntry(List<Entry> entries)
-    {
-        throw new NotImplementedException();
-    }
 
     public void Load(string file)
     {
@@ -47,5 +47,6 @@ class Journal
     public void AddEntry(Entry entry)
     {
         // adds this entry to the list
+        _entries.Add(entry);
     }
 }
