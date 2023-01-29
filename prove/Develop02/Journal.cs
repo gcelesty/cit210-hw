@@ -22,15 +22,8 @@ class Journal
     public void Save(string file)
     {
         // save all entries out to the file
-        Console.WriteLine($"Saving journal to file {file}");
+        Console.WriteLine($"Saved journal to file {file}");
 
-        using (StreamWriter outputFile = new StreamWriter($"{file.Split('.')[0]}.csv"))
-        {
-            _entries.ForEach(entry =>
-            {
-                outputFile.WriteLine(entry.GetEntry()); 
-            });
-        }
     }
 
 
@@ -47,6 +40,14 @@ class Journal
             string[] attr = line.Split(';');
 
             loadedEntries.Add(new Entry(attr[2], attr[1], attr[0]));
+        }
+
+        using (StreamWriter outputFile = new StreamWriter($"{file.Split('.')[0]}.csv"))
+        {
+            _entries.ForEach(entry =>
+            {
+                outputFile.WriteLine(entry.GetEntry()); 
+            });
         }
     }
 
