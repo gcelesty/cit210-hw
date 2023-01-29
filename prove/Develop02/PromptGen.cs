@@ -4,9 +4,10 @@ class PromptGen
 
     public string GetRandomPrompt()
     {
-        this._prompt.Add(new string("Who do you like? "));
-        this._prompt.Add(new string("What did you eat today? "));
+        this._prompt.Add(new string("What is due this week? "));
+        this._prompt.Add(new string("What is your favorite class? "));
         this._prompt.Add(new string("What is your major? "));
+        this._prompt.Add(new string("When are you scheduled to graduate? "));
         this._prompt.Add(new string("What is your dream job? "));
         this._prompt.Add(new string("What do you do in your free time? "));
         this._prompt.Add(new string("What is the best thing about yourself? "));
