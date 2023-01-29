@@ -7,15 +7,18 @@ class Program
         Journal theJournal = new Journal();
         PromptGen generator = new PromptGen();
         
+        Console.WriteLine("");
         Console.WriteLine("Welcome to Journal Program");
+        Console.WriteLine("");
 
         string choice = "";
 
         while (choice != "5")
         {
             DisplayMenu();
-            Console.WriteLine("Pick a number 1-5");
+            Console.Write("Pick a number 1-5: ");
             choice = Console.ReadLine();
+            Console.WriteLine("");
 
             if (choice == "1")
             {
@@ -29,6 +32,7 @@ class Program
                 // get the users response text
                 Console.Write(">> ");
                 string response = Console.ReadLine();
+                Console.WriteLine("");
 
                 // get current date and save it as a string
                 DateTime currentTime = DateTime.Now;
@@ -72,12 +76,11 @@ class Program
 
      static void DisplayMenu()
     {
-        Console.WriteLine("1. Write a new entry jounral entry");
+        Console.WriteLine("1. Write a new entry journal entry");
         Console.WriteLine("2. Display jounrnal entry");
         Console.WriteLine("3. Save journal");
         Console.WriteLine("4. Load journal");
         Console.WriteLine("5. Exit");
+        Console.WriteLine("");
     }
-
-
 }

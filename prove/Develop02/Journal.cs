@@ -19,7 +19,6 @@ class Journal
 
     }
 
-
     public void Load(string file)
     {
         // load all the entries from the file
