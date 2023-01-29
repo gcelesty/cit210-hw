@@ -31,11 +31,12 @@ class Program
                 string response = Console.ReadLine();
 
                 // get current date and save it as a string
-                // DateTime date = DateTime.Now;
+                DateTime currentTime = DateTime.Now;
+                string date = currentTime.ToShortDateString();
 
                 // create the entry object
                 Entry theEntry = new Entry();
-                theEntry._date = DateTime.Now.ToString();
+                theEntry._date = date;
                 theEntry._prompt = prompt;
                 theEntry._text = response;
 
