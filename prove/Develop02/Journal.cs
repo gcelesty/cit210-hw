@@ -12,6 +12,7 @@ class Journal
     {
         // save all entries out to the file
         Console.WriteLine($"Saving journal to file {file}");
+        this._entries=AddEntry(_entries);
 
         using (StreamWriter outputFile = new StreamWriter($"{file.Split('.')[0]}.csv"))
         {
@@ -20,6 +21,11 @@ class Journal
                 outputFile.WriteLine(entry.GetEntry()); 
             });
         }
+    }
+
+    private List<Entry> AddEntry(List<Entry> entries)
+    {
+        throw new NotImplementedException();
     }
 
     public void Load(string file)
