@@ -14,20 +14,20 @@ class Program
         while (choice != "5")
         {
             DisplayMenu();
-            Console.WriteLine("What do you want to do?");
+            Console.WriteLine("Pick a number 1-5");
             choice = Console.ReadLine();
 
             if (choice == "1")
             {
                 // write
-                Console.WriteLine("Writing a new entry");
+                //Console.WriteLine("Writing a new entry");
 
                 // get a new prompt & display it
                 string prompt = generator.GetRandomPrompt();
                 Console.WriteLine(prompt);
 
                 // get the users response text
-                Console.Write("> ");
+                Console.Write(">> ");
                 string response = Console.ReadLine();
 
                 // get current date and save it as a string
