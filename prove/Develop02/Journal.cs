@@ -1,24 +1,15 @@
 class Journal
 {
-    public string _date;
-    public string _prompt;
-    public string _text;
     public List<Entry> _entries = new List<Entry>();
 
     public Journal() { }
 
     public void Display()
     {   
-       // _entries.ForEach(entry =>
-        //{
-         //   Console.WriteLine(entry.GetEntry()); 
-        //});
-
-        Console.WriteLine("");
-        Console.WriteLine($"Date: {this._date} - {this._prompt}");
-        Console.WriteLine($">> {this._text}");
-        Console.WriteLine("");
-            
+        _entries.ForEach(entry =>
+        {
+           Console.WriteLine(entry.GetEntry()); 
+        });            
     }
 
     public void Save(string file)
