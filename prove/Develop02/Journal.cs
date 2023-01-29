@@ -1,21 +1,23 @@
 class Journal
 {
+    public string _date;
+    public string _prompt;
+    public string _text;
     public List<Entry> _entries = new List<Entry>();
 
     public Journal() { }
 
     public void Display()
-    {
-        // iterate thrugh each entry in the list and display it
-        //Console.WriteLine("Displaying the journal");  
- 
-        // entry.GetEntry();
+    {   
+       // _entries.ForEach(entry =>
+        //{
+         //   Console.WriteLine(entry.GetEntry()); 
+        //});
 
-    
-            _entries.ForEach(entry =>
-            {
-                Console.WriteLine(entry.GetEntry()); 
-            });
+        Console.WriteLine("");
+        Console.WriteLine($"Date: {this._date} - {this._prompt}");
+        Console.WriteLine($">> {this._text}");
+        Console.WriteLine("");
             
     }
 
@@ -30,7 +32,7 @@ class Journal
     public void Load(string file)
     {
         // load all the entries from the file
-        Console.WriteLine($"Loading jounral file {file}");
+        Console.WriteLine($"Loading journal file {file}");
 
         string[] lines = System.IO.File.ReadAllLines(file);
         List<Entry> loadedEntries = new List<Entry>();
