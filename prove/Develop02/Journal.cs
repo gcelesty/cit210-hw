@@ -32,7 +32,7 @@ class Journal
         // load all the entries from the file
         Console.WriteLine($"Loading jounral file {file}");
 
-        string[] lines = System.IO.File.ReadAllLines($"{file.Split('.')[0]}.csv");
+        string[] lines = System.IO.File.ReadAllLines(file);
         List<Entry> loadedEntries = new List<Entry>();
 
         foreach (string line in lines)
