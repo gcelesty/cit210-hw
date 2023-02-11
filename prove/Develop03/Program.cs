@@ -32,31 +32,39 @@ class Program
             string scriptureOne = choiceOne.scriptureOne();
             Console.WriteLine(scriptureOne);
 
-            Console.WriteLine(hide.Hiding(scriptureOne));
+            Console.WriteLine(hide.HidingOne(scriptureOne));
         }
         else if (choice == "2")
         {       
             // 2 Nephi 31:19
             string scriptureTwo = choiceTwo.scriptureTwo();
             Console.WriteLine(scriptureTwo);
+
+            Console.WriteLine(hide.HidingTwo(scriptureTwo));
         }
         else if (choice == "3")
         {
             // Alma 32:21
             string scriptureThree = choiceThree.scriptureThree();
             Console.WriteLine(scriptureThree);
+
+            Console.WriteLine(hide.HidingThree(scriptureThree));
         }
         else if (choice == "4")
         {
             // Ether 12:6
             string scriptureFour = choiceFour.scriptureFour();
             Console.WriteLine(scriptureFour);
+
+            Console.WriteLine(hide.HidingFour(scriptureFour));
         }
         else if (choice == "5")
         {
             // Ether 7:33
             string scriptureFive = choiceFive.scriptureFive();
             Console.WriteLine(scriptureFive);
+
+            Console.WriteLine(hide.HidingFive(scriptureFive));
         }
         else if (choice == "6")
         {
@@ -64,6 +72,7 @@ class Program
             string ranScripture = generator.RandomScripture();
             Console.WriteLine(ranScripture);
             
+            Console.WriteLine(hide.HidingRandom(ranScripture));
         }
 
         Console.WriteLine("");

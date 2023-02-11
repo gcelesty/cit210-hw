@@ -39,4 +39,9 @@ class ListOfScript
 
         return scriptureFive;
     }
+
+    internal void ForEach(Action<object> value)
+    {
+        throw new NotImplementedException();
+    }
 }
