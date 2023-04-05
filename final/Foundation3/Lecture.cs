@@ -11,7 +11,7 @@ public class Lecture : Event
         _capacity = capacity;
     }
 
-     public string LectureFullDetails()
+    public string LectureFullDetails()
     {
         return $" \n Speaker: {_speaker} \n Maximum Capacity: {_capacity} people";
     }
