@@ -26,6 +26,6 @@ public class Running : Activity
 
     public override string GetSummary()
     {
-        return $"   {Date} {Name} ({Minutes} min) \n\tDistance {string.Format("{0:#.0}",GetDistance())} miles \n\tSpeed {string.Format("{0:#.0}",GetSpeed())} mph \n\tPace: {string.Format("{0:#.0}",GetPace())} min per mile ";
+        return $"{Date} {Name} ({Minutes} min)- Distance {string.Format("{0:#.0}",GetDistance())} miles, Speed {string.Format("{0:#.0}",GetSpeed())} mph, Pace: {string.Format("{0:#.0}",GetPace())} min per mile ";
     }
 }
